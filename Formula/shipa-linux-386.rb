@@ -1,4 +1,4 @@
-class Shipa < Formula
+class ShipaLinux386 < Formula
     desc "Shipa command-line interface"
     homepage "https://shipa.io/"
     license "Apache-2.0"
