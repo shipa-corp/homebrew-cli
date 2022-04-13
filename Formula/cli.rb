@@ -3,6 +3,7 @@ class Cli < Formula
     homepage "https://shipa.io/"
     license "Apache-2.0"
 
+    platform = ""
     sha = ""
     root_url = "https://storage.googleapis.com/shipa-client/1.7.0/shipa_"
 
@@ -13,28 +14,29 @@ class Cli < Formula
     os = OS.kernel_name.downcase
     arch = Hardware::CPU.intel? ? "amd64" : Hardware::CPU.arch.to_s
     
+
     if os == "darwin" && (arch == "amd64" || arch == "arm64")
-        root_url += "darwin_amd64"
+        platform = "darwin_amd64"
         sha = darwin_amd64_sha256
     elsif os == "linux"
         if Hardware::CPU.is_64_bit?
-            root_url += "linux_amd64"
+            platform = "linux_amd64"
             sha = linux_amd64_sha256
         else # 32 bit install
-            root_url += "linux_386"
+            platform = "linux_386"
             sha = linux_386_sha256
         end
     end
 
-    if sha == ""
+    if platform == ""
         odie "Sorry, architecture not supported: See instructions on downloading Shipa Client from https://learn.shipa.io/docs/downloading-the-shipa-client"
     end
 
     sha256 sha
-    url root_url
+    url root_url + platform
   
     def install
-        bin.install Dir["shipa_*"] => "shipa"
+        bin.install "shipa_" + platform => "shipa"
     end
   
     test do
