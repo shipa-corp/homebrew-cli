@@ -36,7 +36,8 @@ class Cli < Formula
     url root_url + platform
   
     def install
-        bin.install "shipa_" + platform => "shipa"
+        system "ls" "|" "xargs" "-I" "{}" "mv" "{}" "shipa" 
+        bin.install "shipa"
     end
   
     test do
