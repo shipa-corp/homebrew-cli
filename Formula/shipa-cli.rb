@@ -2,7 +2,7 @@ class ShipaCli < Formula
     desc "Shipa command-line interface"
     homepage "https://shipa.io/"
     license "Apache-2.0"
-    version 1.7.0
+    version "1.7.0"
 
     platform = ""
     sha = ""
