@@ -36,7 +36,9 @@ class Cli < Formula
     url root_url + platform
   
     def install
-        system "ls", "|", "xargs", "-I", "{}", "mv", "{}", "shipa" 
+        Dir["*"].each do |binary|
+            File.rename(binary, "shipa")
+        end
         bin.install "shipa"
     end
   
