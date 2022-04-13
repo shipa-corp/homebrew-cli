@@ -34,7 +34,7 @@ class Cli < Formula
     url root_url
   
     def install
-        bin.install "*" => "shipa"
+        bin.install Dir["shipa_*"] => "shipa"
     end
   
     test do
