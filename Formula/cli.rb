@@ -1,4 +1,4 @@
-class CLI < Formula
+class Cli < Formula
     desc "Shipa command-line interface"
     homepage "https://shipa.io/"
     license "Apache-2.0"
