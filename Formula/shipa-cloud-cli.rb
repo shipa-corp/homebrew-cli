@@ -1,4 +1,4 @@
-class CloudCli < Formula
+class ShipaCloudCli < Formula
     desc "Shipa cloud command-line interface"
     homepage "https://shipa.io/"
     license "Apache-2.0"
