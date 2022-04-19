@@ -12,11 +12,14 @@ Homebrew tap for shipa-io projects, in particular shipa-client, shipa-cloud-clie
 ## Commands
 
 ```sh
+# Add repository to the list of formulae that Homebrew tracks, updates, and installs from
+brew tap shipa-corp/cli
+
 # Homebrew Self-Hosted
-brew install shipa-corp/shipa/shipa-cli
+brew install shipa-cli
 
 # Homebrew Cloud
-brew install shipa-corp/shipa/shipa-cloud-cli
+brew install shipa-cloud-cli
 ```
 
 ## Licensing
