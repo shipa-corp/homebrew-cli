@@ -2,15 +2,15 @@ class ShipaCli < Formula
     desc "Shipa command-line interface"
     homepage "https://shipa.io/"
     license "Apache-2.0"
-    version "1.7.0"
+    version "1.7.4"
 
     platform = ""
     sha = ""
     root_url = "https://storage.googleapis.com/shipa-client/" + version + "/shipa_"
 
-    darwin_amd64_sha256 = "96535ad525837e1a47616264f7a78c1e74957b7c9b4e4578770c1e2540ec007b"
-    linux_amd64_sha256 = "d18454385433e664ac0c8042029e6a6185cae3077df0dd8477c10c6a029e3013"
-    linux_386_sha256 = "093c865e10d75bcda4248b9e410bafdcec9ddc3eee2c76245b8adbf13b125bc0"
+    darwin_amd64_sha256 = "5d5d872cfe44e8878ca785e3ffb293bbe931a4cfaba0dd78b6ea567ed740ac51"
+    linux_amd64_sha256 = "2a6eefeeeb2d80ae4f060f4c17a51a9b44494f18b206a40bef806bae38c459dd"
+    linux_386_sha256 = "f4cf10305a719dcbdf9332e59f40d61ebdacbf55cc5862830240d3e1704277a7"
 
     os = OS.kernel_name.downcase
     arch = Hardware::CPU.intel? ? "amd64" : Hardware::CPU.arch.to_s
