@@ -1,6 +1,6 @@
-class ShipaCloudCli < Formula
-    desc "Shipa cloud command-line interface"
-    homepage "https://shipa.io/"
+class LappsCloudCli < Formula
+    desc "Lens Apps cloud command-line interface"
+    homepage "https://apps.lenscloud.io//"
     license "Apache-2.0"
     version "1.8.1-cloud"
 
@@ -29,7 +29,7 @@ class ShipaCloudCli < Formula
     end
 
     if platform == ""
-        odie "Sorry, architecture not supported: See instructions on downloading Shipa Client from https://learn.shipa.io/docs/downloading-the-shipa-client"
+        odie "Sorry, architecture not supported: See instructions on downloading Shipa Client from https://learn.lenscloud.io/docs/downloading-the-lensapps-client"
     end
 
     sha256 sha
@@ -37,12 +37,12 @@ class ShipaCloudCli < Formula
   
     def install
         Dir["*"].each do |binary|
-            File.rename(binary, "shipa")
+            File.rename(binary, "lapps")
         end
-        bin.install "shipa"
+        bin.install "lapps"
     end
   
     test do
-      system "#{bin}/shipa", "help"
+      system "#{bin}/lapps", "help"
     end
 end
