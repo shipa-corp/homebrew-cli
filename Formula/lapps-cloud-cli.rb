@@ -8,9 +8,9 @@ class LappsCloudCli < Formula
     sha = ""
     root_url = "https://storage.googleapis.com/shipa-client-cloud/" + version + "/lapps_"
 
-    darwin_amd64_sha256 = "cc95761b23702de486788b799e3804309f5a0a6ed41449cd8b9b0b533119ace2"
-    linux_amd64_sha256 = "ec8b15d2bf85d2a22c79c6f2d92c01991f9f8ca285ad7203ce7a96a5c8f9f3b2"
-    linux_386_sha256 = "ef465069992903058520416d725dd948d97ec51275afc64e2206445c3651be62"
+    darwin_amd64_sha256 = "86eefb7270996618ac163da1098e47a50f16763125a11521ab77e5f96ef8bc56"
+    linux_amd64_sha256 = "abba62ccf535f024e6876c324c4bea09f883946ee49644b512cbc4ca0d99024f"
+    linux_386_sha256 = "9424a1b91c5c6abe1d8f511f5112c2833668f25bdca30f0ff2d807d75becabfc"
 
     os = OS.kernel_name.downcase
     arch = Hardware::CPU.intel? ? "amd64" : Hardware::CPU.arch.to_s
