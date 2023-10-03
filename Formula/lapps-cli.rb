@@ -2,15 +2,15 @@ class LappsCli < Formula
     desc "Lens Apps cloud command-line interface"
     homepage "https://apps.lenscloud.io//"
     license "Apache-2.0"
-    version "1.8.2"
+    version "1.8.5"
 
     platform = ""
     sha = ""
     root_url = "https://storage.googleapis.com/shipa-client/" + version + "/lapps_"
 
-    darwin_amd64_sha256 = "8e1995c3453d63ed9c5dcba038fa2585210f016dcd26215bd5279d7d6b0aa92b"
-    linux_amd64_sha256 = "afe617ceb3a0c9126379fba4ec34fbdbb1987732f4a966d5220132ab6463ae29"
-    linux_386_sha256 = "1643f36ef756a0b139b7285a185f0a5593ce36aa5c3582f776c5da525b51398d"
+    darwin_amd64_sha256 = "b35204da0905a9e34e75dd819e5b2ed70d79647ae79043f4b71f27d6cb1d9e54"
+    linux_amd64_sha256 = "e0f3a2906e03acd0a529c981d6240e3c6726e5b89a17e62c52b643888b8872e3"
+    linux_386_sha256 = "0ca2c6d7f6fcac8ce28908cd3cf74f171d9b592127b76838f64fa397d11fa396"
 
     os = OS.kernel_name.downcase
     arch = Hardware::CPU.intel? ? "amd64" : Hardware::CPU.arch.to_s
